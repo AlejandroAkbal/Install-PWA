@@ -33,9 +33,9 @@
 	export let selectedTab = 0
 </script>
 
-<main class="py-4">
+<main class="py-6">
 	<section>
-		<div class="grid place-items-center gap-2">
+		<div class="grid place-items-center gap-3">
 			<img
 				src="https://www.google.com/s2/favicons?domain={data.domain}"
 				alt="Favicon of '{data.domain}' domain"
@@ -50,7 +50,7 @@
 
 		<h2 class="mt-2 text-lg">
 			Learn how to install the
-			<output>{data.domain}</output> PWA on your device.
+			<output>{data.domain}</output> PWA on your device in 4 simple steps
 		</h2>
 	</section>
 
@@ -81,42 +81,60 @@
 
 			<li>
 				<h3 class="text-lg font-semibold">Step 2</h3>
-				Install the App
 
 				{#if selectedTab === 0}
-					<ol class="list-decimal list-inside">
-						<li>Open the website in Chrome</li>
-						<li>
-							Click the <code>More</code> button
-						</li>
-						<li>
-							Click <code>Add to Home Screen</code>
-						</li>
-					</ol>
+					Click the <kbd class="kbd kbd-sm">More</kbd> button
 
 					<!--  -->
 				{:else if selectedTab === 1}
-					<ol class="list-decimal list-inside">
-						<li>Open the website in Safari</li>
-						<li>
-							Click the <code>Share</code> button
-						</li>
-						<li>
-							Click <code>Add to Home Screen</code>
-						</li>
-					</ol>
+					Click the <kbd class="kbd kbd-sm">Share</kbd> button
 
 					<!--  -->
 				{:else}
-					<ol class="list-decimal list-inside">
-						<li>Open the website in Chrome</li>
-						<li>
-							Click the <code>More</code> button
-						</li>
-						<li>
-							Click <code>Add to Home Screen</code>
-						</li>
-					</ol>
+					-
+				{/if}
+			</li>
+
+			<li>
+				<h3 class="text-lg font-semibold">Step 3</h3>
+
+				{#if selectedTab === 0}
+					Click <kbd class="kbd kbd-sm">Install App</kbd>
+
+					<div
+						class="block text-left tooltip tooltip-bottom tooltip-primary mt-2"
+						data-tip="Try again later! Or just continue, it will still work"
+					>
+						<button class="btn btn-ghost btn-xs no-animation pl-0"> Only see "Add to Home Screen"? </button>
+					</div>
+
+					<!--  -->
+				{:else if selectedTab === 1}
+					Click <kbd class="kbd kbd-sm">Add to Home Screen</kbd>
+
+					<!--  -->
+				{:else}
+					Click <kbd class="kbd kbd-sm">Install</kbd>
+				{/if}
+			</li>
+
+			<li>
+				<h3 class="text-lg font-semibold">Step 4</h3>
+
+				Done! ✨
+
+				<br />
+
+				{#if selectedTab === 0}
+					You can open the App from your Home Screen
+
+					<!--  -->
+				{:else if selectedTab === 1}
+					You can open the App from your Home Screen
+
+					<!--  -->
+				{:else}
+					You can open the App from your Desktop
 				{/if}
 			</li>
 		</ol>
