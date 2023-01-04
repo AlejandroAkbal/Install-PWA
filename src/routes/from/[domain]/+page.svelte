@@ -30,6 +30,11 @@
 		srcset.push(`${websiteCaptureApiUrl.toString()} ${width}w`)
 	})
 
+	/**
+	 * 0 - Android
+	 * 1 - iOS / iPadOS
+	 * 2 - Desktop
+	 */
 	export let selectedTab = 0
 </script>
 
@@ -46,12 +51,12 @@
 			<h1 class="text-2xl truncate font-semibold">
 				{data.domain}
 			</h1>
-		</div>
 
-		<h2 class="mt-2 text-lg">
-			Learn how to install the
-			<output>{data.domain}</output> PWA on your device in 4 simple steps
-		</h2>
+			<h2 class="text-lg">
+				Learn how to install the
+				<output>{data.domain}</output> PWA on your device in 4 simple steps
+			</h2>
+		</div>
 	</section>
 
 	<div class="mt-6 grid place-items-center">
