@@ -10,8 +10,9 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
   postcss: ^8.4.20
-  prettier: ^2.8.0
+  prettier: ^2.8.1
   prettier-plugin-svelte: ^2.8.1
+  prettier-plugin-tailwindcss: ^0.2.1
   svelte: ^3.54.0
   svelte-check: ^2.9.2
   tailwindcss: ^3.2.4
@@ -30,6 +31,7 @@ devDependencies:
   postcss: 8.4.20
   prettier: 2.8.1
   prettier-plugin-svelte: 2.9.0_ajxj753sv7dbwexjherrch25ta
+  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
   svelte: 3.55.0
   svelte-check: 2.10.3_qs7rgzvahok4cbkjoy5bgypde4
   tailwindcss: 3.2.4_postcss@8.4.20
@@ -1406,6 +1408,15 @@ packages:
     dependencies:
       prettier: 2.8.1
       svelte: 3.55.0
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
+    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
+    engines: {node: '>=12.17.0'}
+    peerDependencies:
+      prettier: '>=2.2.0'
+    dependencies:
+      prettier: 2.8.1
     dev: true
 
   /prettier/2.8.1:
