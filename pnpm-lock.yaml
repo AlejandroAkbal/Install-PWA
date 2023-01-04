@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@playwright/test': ^1.28.1
+  '@rgossiaux/svelte-headlessui': ^1.0.2
   '@sveltejs/adapter-auto': ^1.0.0
   '@sveltejs/kit': ^1.0.0
   autoprefixer: ^10.4.13
@@ -21,6 +22,7 @@ specifiers:
 
 devDependencies:
   '@playwright/test': 1.29.1
+  '@rgossiaux/svelte-headlessui': 1.0.2_svelte@3.55.0
   '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.1
   '@sveltejs/kit': 1.0.1_svelte@3.55.0+vite@4.0.4
   autoprefixer: 10.4.13_postcss@8.4.20
@@ -323,6 +325,14 @@ packages:
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+    dev: true
+
+  /@rgossiaux/svelte-headlessui/1.0.2_svelte@3.55.0:
+    resolution: {integrity: sha512-sauopYTSivhzXe1kAvgawkhyYJcQlK8Li3p0d2OtcCIVprOzdbard5lbqWB4xHDv83zAobt2mR08oizO2poHLQ==}
+    peerDependencies:
+      svelte: ^3.44.0
+    dependencies:
+      svelte: 3.55.0
     dev: true
 
   /@sveltejs/adapter-auto/1.0.0_@sveltejs+kit@1.0.1:
