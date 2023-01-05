@@ -1,5 +1,6 @@
 <script>
 	import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@rgossiaux/svelte-headlessui'
+	import { onMount } from 'svelte'
 
 	/** @type {import('./$types').PageData} */
 	export let data
@@ -8,27 +9,19 @@
 
 	export const url = new URL(`https://${domain}`)
 
-	export const websiteCaptureApiUrl = new URL('https://url-shot.api-point.cf')
+	function detectTypeOfDevice() {
+		const userAgent = window.navigator.userAgent || window.navigator.vendor
 
-	websiteCaptureApiUrl.searchParams.set('url', url.toString())
+		if (/android/i.test(userAgent)) {
+			return 0
+		}
 
-	const sizes = [
-		[640, 360],
-		[1024, 768],
-		[1920, 1080]
-	]
+		if (/iPad|iPhone|iPod/.test(userAgent)) {
+			return 1
+		}
 
-	/**
-	 * @type {string[]}
-	 */
-	export const srcset = []
-
-	sizes.forEach(([width, height]) => {
-		websiteCaptureApiUrl.searchParams.set('width', width.toString())
-		websiteCaptureApiUrl.searchParams.set('height', height.toString())
-
-		srcset.push(`${websiteCaptureApiUrl.toString()} ${width}w`)
-	})
+		return 2
+	}
 
 	/**
 	 * 0 - Android
@@ -36,6 +29,11 @@
 	 * 2 - Desktop
 	 */
 	export let selectedTab = 0
+
+	onMount(() => {
+		// TODO: Execute before rendering
+		selectedTab = detectTypeOfDevice()
+	})
 </script>
 
 <main class="py-6">
@@ -59,13 +57,58 @@
 		</div>
 	</section>
 
-	<div class="mt-6 grid place-items-center">
-		<TabGroup on:change={(e) => (selectedTab = e.detail)}>
+	<div class="mt-6">
+		<TabGroup
+			defaultIndex={selectedTab}
+			on:change={(e) => (selectedTab = e.detail)}
+			class="grid place-items-center"
+		>
 			<TabList class="max-w-fit tabs tabs-boxed">
 				<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Android</Tab>
 				<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>iOS / iPadOS</Tab>
 				<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Desktop</Tab>
 			</TabList>
+
+			<TabPanels>
+				<!-- Android -->
+				<TabPanel>
+					<div class="relative mt-6">
+						<!-- Domain capture -->
+						<img
+							src="https://url-shot.api-point.cf?width=360&height=800&url={url.toString()}"
+							alt="Capture of '{data.domain}' domain"
+							style="filter: brightness(0.8) contrast(1.2);"
+							class="shadow-lg w-auto max-h-[40vh]"
+						/>
+					</div>
+				</TabPanel>
+
+				<!-- iOS -->
+				<TabPanel>
+					<div class="relative mt-6">
+						<!-- Domain capture -->
+						<img
+							src="https://url-shot.api-point.cf?width=768&height=1024&url={url.toString()}"
+							alt="Capture of '{data.domain}' domain"
+							style="filter: brightness(0.8) contrast(1.2);"
+							class="shadow-lg w-auto max-h-[40vh]"
+						/>
+					</div>
+				</TabPanel>
+
+				<!-- Desktop -->
+				<TabPanel>
+					<div class="relative mt-6">
+						<!-- Domain capture -->
+						<img
+							src="https://url-shot.api-point.cf?width=1920&height=1080&url={url.toString()}"
+							alt="Capture of '{data.domain}' domain"
+							style="filter: brightness(0.8) contrast(1.2);"
+							class="shadow-lg w-auto max-h-[40vh]"
+						/>
+					</div>
+				</TabPanel>
+			</TabPanels>
 		</TabGroup>
 	</div>
 
@@ -143,16 +186,5 @@
 				{/if}
 			</li>
 		</ol>
-	</section>
-
-	<section class="relative mt-6">
-		<!-- Domain capture -->
-		<img
-			src={websiteCaptureApiUrl.toString()}
-			alt="Capture of '{data.domain}' domain"
-			srcset={srcset.join(', ')}
-			style="filter: brightness(0.7) contrast(1.2);"
-			class="shadow-lg w-auto max-h-[60vh]"
-		/>
 	</section>
 </main>
