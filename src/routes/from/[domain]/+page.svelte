@@ -98,13 +98,20 @@
 
 				<!-- Desktop -->
 				<TabPanel>
-					<div class="relative mt-6">
+					<div class="relative mt-6 shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0">
+						<!-- Image cutout overlay -->
+						<img
+							class="absolute top-0 left-0 z-10"
+							src="/media/img/desktop-1920x1080.png"
+							alt="Desktop installation cutout"
+						/>
+
 						<!-- Domain capture -->
 						<img
 							src="https://url-shot.api-point.cf?width=1920&height=1080&url={url.toString()}"
 							alt="Capture of '{data.domain}' domain"
-							style="filter: brightness(0.8) contrast(1.2);"
-							class="shadow-lg w-auto max-h-[40vh]"
+							style="filter: brightness(0.7) contrast(1.2);"
+							class="pt-[52px]"
 						/>
 					</div>
 				</TabPanel>
