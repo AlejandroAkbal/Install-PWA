@@ -72,26 +72,32 @@
 			<TabPanels>
 				<!-- Android -->
 				<TabPanel>
-					<div class="relative mt-6">
+					<div class="relative mt-6 shadow-xl min-h-[525px] overflow-hidden rounded-md border-0">
+						<!-- Image cutout overlay -->
+						<img
+							class="absolute top-0 left-0 z-10"
+							src="/media/img/android-360x780.png"
+							alt="Android installation cutout "
+						/>
+
 						<!-- Domain capture -->
 						<img
-							src="https://url-shot.api-point.cf?width=360&height=800&url={url.toString()}"
+							src="https://url-shot.api-point.cf?width=360&height=780&url={url.toString()}"
 							alt="Capture of '{data.domain}' domain"
 							style="filter: brightness(0.8) contrast(1.2);"
-							class="shadow-lg w-auto max-h-[40vh]"
+							class="pt-[82px] object-cover"
 						/>
 					</div>
 				</TabPanel>
 
 				<!-- iOS -->
 				<TabPanel>
-					<div class="relative mt-6">
+					<div class="relative mt-6 shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0">
 						<!-- Domain capture -->
 						<img
 							src="https://url-shot.api-point.cf?width=768&height=1024&url={url.toString()}"
 							alt="Capture of '{data.domain}' domain"
-							style="filter: brightness(0.8) contrast(1.2);"
-							class="shadow-lg w-auto max-h-[40vh]"
+							style="filter: brightness(0.7) contrast(1.2);"
 						/>
 					</div>
 				</TabPanel>
