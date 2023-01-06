@@ -130,6 +130,10 @@
 			<li>
 				<h3 class="text-lg font-semibold">Step 1</h3>
 
+				{#if selectedTab === 0}
+					Connect to a WiFi network and
+				{/if}
+
 				<a
 					href={url.toString()}
 					target="_blank"
@@ -138,6 +142,10 @@
 				>
 					Open the website
 				</a>
+
+				{#if selectedTab === 0}
+					in Google Chrome
+				{/if}
 			</li>
 
 			<li>
