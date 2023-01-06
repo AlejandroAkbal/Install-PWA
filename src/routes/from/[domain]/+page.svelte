@@ -61,7 +61,7 @@
 		<TabGroup
 			defaultIndex={selectedTab}
 			on:change={(e) => (selectedTab = e.detail)}
-			class="grid place-items-center"
+			class="grid place-items-center gap-6"
 		>
 			<TabList class="max-w-fit tabs tabs-boxed">
 				<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Android</Tab>
@@ -72,7 +72,7 @@
 			<TabPanels>
 				<!-- Android -->
 				<TabPanel>
-					<div class="relative mt-6 shadow-xl min-h-[525px] overflow-hidden rounded-md border-0">
+					<div class="relative shadow-xl min-h-[525px] overflow-hidden rounded-md border-0">
 						<!-- Image cutout overlay -->
 						<img
 							class="absolute top-0 left-0 z-10"
@@ -92,7 +92,7 @@
 
 				<!-- iOS -->
 				<TabPanel>
-					<div class="relative mt-6 shadow-xl max-h-[500px] overflow-hidden rounded-md border-0">
+					<div class="relative shadow-xl max-h-[500px] overflow-hidden rounded-md border-0">
 						<!-- Image cutout overlay -->
 						<img
 							class="absolute top-0 left-0 z-10"
@@ -112,7 +112,7 @@
 
 				<!-- Desktop -->
 				<TabPanel>
-					<div class="relative mt-6 shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0">
+					<div class="relative shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0">
 						<!-- Image cutout overlay -->
 						<img
 							class="absolute top-0 left-0 z-10"
