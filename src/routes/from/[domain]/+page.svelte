@@ -146,7 +146,7 @@
 					href={url.toString()}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="link link-primary"
+					class="link link-info"
 				>
 					Open the website
 				</a>
