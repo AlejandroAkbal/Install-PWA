@@ -77,7 +77,7 @@
 						<img
 							class="absolute top-0 left-0 z-10"
 							src="/media/img/android-360x780.png"
-							alt="Android installation cutout "
+							alt="Android installation cutout"
 						/>
 
 						<!-- Domain capture -->
@@ -92,12 +92,20 @@
 
 				<!-- iOS -->
 				<TabPanel>
-					<div class="relative mt-6 shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0">
+					<div class="relative mt-6 shadow-xl max-h-[500px] overflow-hidden rounded-md border-0">
+						<!-- Image cutout overlay -->
+						<img
+							class="absolute top-0 left-0 z-10"
+							src="/media/img/ios-1024x715.png"
+							alt="iOS installation cutout"
+						/>
+
 						<!-- Domain capture -->
 						<img
-							src="https://url-shot.api-point.cf?width=768&height=1024&url={url.toString()}"
+							src="https://url-shot.api-point.cf?width=1024&height=715&url={url.toString()}"
 							alt="Capture of '{data.domain}' domain"
 							style="filter: brightness(0.7) contrast(1.2);"
+							class="pt-[64px] object-cover"
 						/>
 					</div>
 				</TabPanel>
@@ -117,7 +125,7 @@
 							src="https://url-shot.api-point.cf?width=1920&height=1080&url={url.toString()}"
 							alt="Capture of '{data.domain}' domain"
 							style="filter: brightness(0.7) contrast(1.2);"
-							class="pt-[52px]"
+							class="pt-[52px] object-cover"
 						/>
 					</div>
 				</TabPanel>
