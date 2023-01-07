@@ -25,8 +25,8 @@ module.exports = {
 					'primary-focus': defaultColors.sky[400],
 					'primary-content': 'black',
 
-					// secondary: '#a4cbb4',
-					// 'secondary-content': '#282425',
+					secondary: defaultColors.lime[300],
+					'secondary-content': 'black',
 
 					// accent: '#ebdc99',
 					// 'accent-content': '#282425',
@@ -37,10 +37,9 @@ module.exports = {
 					'base-100': defaultColors.gray[50],
 					'base-200': defaultColors.gray[200],
 					'base-300': defaultColors.gray[300],
-					'base-content': 'black',
+					'base-content': defaultColors.gray[700],
 
 					info: defaultColors.sky[900],
-					// 'info-focus': defaultColors.sky[500],
 					'info-content': '#ffffff',
 
 					// success: '#21CC51',
