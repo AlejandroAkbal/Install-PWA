@@ -1,3 +1,22 @@
+<script>
+	import { goto } from '$app/navigation'
+	import { onMount } from 'svelte'
+
+	/**
+	 * Form submit event
+	 * @param {Event} event
+	 */
+	function onSubmit(event) {
+		const formData = new FormData(event.target)
+
+		const url = formData.get('website-url')
+
+		const domain = new URL(url).hostname
+
+		goto(`/from/${encodeURIComponent(domain)}`)
+	}
+</script>
+
 <main>
 	<div class="bg-base-200 pt-2 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
 		<div class="mx-auto max-w-7xl lg:px-8">
@@ -22,20 +41,21 @@
 						<!-- Action -->
 						<div class="mt-10 sm:mt-12">
 							<form
-								action="/from/"
-								method="get"
+								on:submit|preventDefault={onSubmit}
 								class="sm:mx-auto sm:max-w-xl lg:mx-0"
 							>
 								<div class="sm:flex">
 									<div class="min-w-0 flex-1">
 										<label
-											for="email"
+											for="website-url"
 											class="sr-only">Website URL</label
 										>
 										<input
 											id="website-url"
+											name="website-url"
 											type="url"
 											placeholder="Enter your website URL"
+											required
 											class="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
 										/>
 									</div>
