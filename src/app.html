@@ -34,13 +34,15 @@
 		/>
 
 		<link
-			rel="stylesheet"
 			href="https://rsms.me/inter/inter.css"
+			rel="preload"
+			as="style"
+			onload="this.onload=null; this.rel='stylesheet'"
 		/>
 	</head>
 
 	<body
-		class="bg-base-100"
+		class="bg-base-100 font-sans antialiased"
 		data-sveltekit-preload-data="hover"
 	>
 		<div style="display: contents">%sveltekit.body%</div>
