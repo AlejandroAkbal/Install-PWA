@@ -5,8 +5,10 @@
 
 		<meta
 			name="viewport"
-			content="width=device-width"
+			content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0"
 		/>
+
+		%sveltekit.head%
 
 		<link
 			rel="icon"
@@ -14,12 +16,23 @@
 			href="%sveltekit.assets%/favicon.svg"
 		/>
 
-		%sveltekit.head%
+		<!-- OpenGraph -->
 
-		<link
-			rel="preconnect"
-			href="https://rsms.me/"
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
 		/>
+
+		<meta
+			name="twitter:creator"
+			content="@AlejandroAkbal"
+		/>
+
+		<meta
+			name="theme-color"
+			content="#1f2937"
+		/>
+
 		<link
 			rel="stylesheet"
 			href="https://rsms.me/inter/inter.css"

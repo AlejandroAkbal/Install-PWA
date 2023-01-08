@@ -151,3 +151,5 @@
 </header>
 
 <slot />
+
+<!-- TODO: Footer with social media & credit -->
