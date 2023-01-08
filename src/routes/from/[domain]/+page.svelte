@@ -37,7 +37,9 @@
 </script>
 
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+	<!-- TODO: Gradient from bg-base-200 to bg-base-100 -->
 	<main class="py-6">
+		<!-- Head -->
 		<section>
 			<div class="grid place-items-center gap-3">
 				<img
@@ -53,11 +55,12 @@
 
 				<h2 class="text-lg">
 					Learn how to install the
-					<output>{data.domain}</output> PWA on your device in 4 simple steps
+					<output>{data.domain}</output> PWA on your device in 3 simple steps
 				</h2>
 			</div>
 		</section>
 
+		<!-- Device selector & Preview -->
 		<div class="mt-6">
 			<TabGroup
 				defaultIndex={selectedTab}
@@ -134,6 +137,7 @@
 			</TabGroup>
 		</div>
 
+		<!-- Instructions -->
 		<section class="mt-6">
 			<ol class="space-y-4">
 				<li>
@@ -197,25 +201,24 @@
 				</li>
 
 				<li>
-					<h3 class="text-lg font-semibold">Step 4</h3>
-
-					Done! ✨
-
-					<br />
+					<h3 class="text-lg font-semibold">Done! ✨</h3>
 
 					{#if selectedTab === 0}
-						You can open the App from your Home Screen
+						You can open the <code>{data.domain}</code> app from your Home Screen
 
 						<!--  -->
 					{:else if selectedTab === 1}
-						You can open the App from your Home Screen
+						You can open the <code>{data.domain}</code> app from your Home Screen
 
 						<!--  -->
 					{:else}
-						You can open the App from your Desktop
+						You can open the <code>{data.domain}</code> app from your Desktop
 					{/if}
 				</li>
 			</ol>
 		</section>
+
+		<!-- TODO: Copy button -->
+		<!-- TODO: Share button -->
 	</main>
 </div>
