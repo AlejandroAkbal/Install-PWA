@@ -10,7 +10,7 @@ export function load({ params }) {
 		title: params.domain,
 		description: `Learn how to install the ${params.domain} app!`,
 
-		imageUrl: `https://url-shot.api-point.cf/?width=1200&height=630&url=${params.domain}`,
+		imageUrl: `https://screenshot.akbal.dev/v1/capture?width=1200&height=630&url=${params.domain}`,
 
 		domain: params.domain
 	}

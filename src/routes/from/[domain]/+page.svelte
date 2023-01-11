@@ -86,7 +86,7 @@
 
 							<!-- Domain capture -->
 							<img
-								src="https://url-shot.api-point.cf?width=360&height=780&url={url.toString()}"
+								src="https://screenshot.akbal.dev/v1/capture?width=360&height=780&url={url.toString()}"
 								alt="Capture of '{data.domain}' domain"
 								style="filter: brightness(0.8) contrast(1.2);"
 								class="pt-[82px] object-cover"
@@ -106,7 +106,7 @@
 
 							<!-- Domain capture -->
 							<img
-								src="https://url-shot.api-point.cf?width=1024&height=715&url={url.toString()}"
+								src="https://screenshot.akbal.dev/v1/capture?width=1024&height=715&url={url.toString()}"
 								alt="Capture of '{data.domain}' domain"
 								style="filter: brightness(0.7) contrast(1.2);"
 								class="pt-[64px] object-cover"
@@ -126,7 +126,7 @@
 
 							<!-- Domain capture -->
 							<img
-								src="https://url-shot.api-point.cf?width=1920&height=1080&url={url.toString()}"
+								src="https://screenshot.akbal.dev/v1/capture?width=1920&height=1080&url={url.toString()}"
 								alt="Capture of '{data.domain}' domain"
 								style="filter: brightness(0.7) contrast(1.2);"
 								class="pt-[52px] object-cover"
