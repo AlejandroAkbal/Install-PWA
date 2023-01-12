@@ -81,7 +81,7 @@
 				<div class='hidden space-x-8 md:ml-10 md:flex'>
 					<a
 						class='text-base font-medium link link-hover'
-						href='/from/www.adidas.com'>Example</a
+						href='/from/www.akbal.dev'>Example</a
 					>
 				</div>
 			</div>
