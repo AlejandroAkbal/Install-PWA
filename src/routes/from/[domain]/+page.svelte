@@ -1,13 +1,13 @@
 <script>
-	import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@rgossiaux/svelte-headlessui'
-	import { onMount } from 'svelte'
+	import { Tab, TabGroup, TabList } from '@rgossiaux/svelte-headlessui'
+	import { browser } from '$app/environment'
 
 	/** @type {import('./$types').PageData} */
 	export let data
 
 	const { domain } = data
 
-	export const url = new URL(`https://${domain}`)
+	export const domainUrl = new URL(`https://${domain}`).toString()
 
 	function detectTypeOfDevice() {
 		const userAgent = window.navigator.userAgent || window.navigator.vendor
@@ -28,12 +28,84 @@
 	 * 1 - iOS / iPadOS
 	 * 2 - Desktop
 	 */
-	export let selectedTab = 0
+	let selectedTab = 0
 
-	onMount(() => {
-		// TODO: Execute before rendering
+	const devices = [
+		{
+			name: 'Android',
+			capture: `https://screenshot.akbal.dev/v1/capture?width=360&height=780&url=${domainUrl}`,
+			cutout: '/media/img/android-360x780.png',
+			cutoutMarginTop: 82,
+			width: 360,
+			height: 780
+		},
+		{
+			name: 'iOS',
+			capture: `https://screenshot.akbal.dev/v1/capture?width=1024&height=715&url=${domainUrl}`,
+			cutout: '/media/img/ios-1024x715.png',
+			cutoutMarginTop: 68,
+			width: 1024,
+			height: 715
+		},
+		{
+			name: 'Desktop',
+			capture: `https://screenshot.akbal.dev/v1/capture?width=1920&height=1080&url=${domainUrl}`,
+			cutout: '/media/img/desktop-1920x1080.png',
+			cutoutMarginTop: 83,
+			width: 1920,
+			height: 1080
+		}
+	]
+
+	$: selectedDevice = devices[selectedTab]
+
+	let canvas
+
+	async function preloadImages(imageUrls) {
+
+		const promises = imageUrls.map(async (url) => {
+			const img = new Image()
+			img.src = url
+
+			await img.decode()
+
+			return img
+		})
+
+		return Promise.all(promises)
+	}
+
+	async function drawTwoImageUrlsAsOne() {
+		const canvasContext = canvas.getContext('2d')
+
+		console.debug('Got canvas')
+
+		// Clear canvas
+		canvasContext.clearRect(0, 0, canvas.width, canvas.height)
+
+		const [image, imageOnTop] = await preloadImages([
+			selectedDevice.capture,
+			selectedDevice.cutout
+		])
+
+		image.src = selectedDevice.capture
+		imageOnTop.src = selectedDevice.cutout
+
+		canvasContext.drawImage(image, 0, selectedDevice.cutoutMarginTop)
+
+		// Draw image on top
+		canvasContext.drawImage(imageOnTop, 0, 0)
+
+		console.debug('Images drawn')
+	}
+
+	if (browser) {
 		selectedTab = detectTypeOfDevice()
-	})
+	}
+
+	$: if (browser && selectedDevice) {
+		window.requestAnimationFrame(() => drawTwoImageUrlsAsOne(selectedDevice.capture, selectedDevice.cutout))
+	}
 </script>
 
 <div class='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -74,67 +146,14 @@
 					<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Desktop</Tab>
 				</TabList>
 
-				<TabPanels>
-					<!-- Android -->
-					<TabPanel>
-						<div class='relative shadow-xl min-h-[525px] overflow-hidden rounded-md border-0'>
-							<!-- Image cutout overlay -->
-							<img
-								alt='Android installation cutout'
-								class='absolute top-0 left-0 z-10'
-								src='/media/img/android-360x780.png'
-							/>
-
-							<!-- Domain capture -->
-							<img
-								alt="Capture of '{data.domain}' domain"
-								class='pt-[82px] object-cover'
-								src='https://screenshot.akbal.dev/v1/capture?width=360&height=780&url={url.toString()}'
-								style='filter: brightness(0.8) contrast(1.2);'
-							/>
-						</div>
-					</TabPanel>
-
-					<!-- iOS -->
-					<TabPanel>
-						<div class='relative shadow-xl max-h-[500px] overflow-hidden rounded-md border-0'>
-							<!-- Image cutout overlay -->
-							<img
-								alt='iOS installation cutout'
-								class='absolute top-0 left-0 z-10'
-								src='/media/img/ios-1024x715.png'
-							/>
-
-							<!-- Domain capture -->
-							<img
-								alt="Capture of '{data.domain}' domain"
-								class='pt-[64px] object-cover'
-								src='https://screenshot.akbal.dev/v1/capture?width=1024&height=715&url={url.toString()}'
-								style='filter: brightness(0.7) contrast(1.2);'
-							/>
-						</div>
-					</TabPanel>
-
-					<!-- Desktop -->
-					<TabPanel>
-						<div class='relative shadow-xl max-h-[40vh] overflow-hidden rounded-md border-0'>
-							<!-- Image cutout overlay -->
-							<img
-								alt='Desktop installation cutout'
-								class='absolute top-0 left-0 z-10'
-								src='/media/img/desktop-1920x1080.png'
-							/>
-
-							<!-- Domain capture -->
-							<img
-								alt="Capture of '{data.domain}' domain"
-								class='pt-[52px] object-cover'
-								src='https://screenshot.akbal.dev/v1/capture?width=1920&height=1080&url={url.toString()}'
-								style='filter: brightness(0.7) contrast(1.2);'
-							/>
-						</div>
-					</TabPanel>
-				</TabPanels>
+				<canvas
+					alt="Capture of '{data.domain}' domain"
+					bind:this={canvas}
+					class='w-auto max-w-full max-h-[60vh] md:max-h-[55vh] shadow-xl border-0 rounded-md'
+					height={selectedDevice.height}
+					width={selectedDevice.width}
+				>
+				</canvas>
 			</TabGroup>
 		</div>
 
@@ -150,7 +169,7 @@
 
 					<a
 						class='link link-info'
-						href={url.toString()}
+						href={domainUrl}
 						rel='noopener noreferrer'
 						target='_blank'
 					>
