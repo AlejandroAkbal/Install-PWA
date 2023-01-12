@@ -1,50 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
 
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0"
-		/>
+	<meta
+		content='width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0'
+		name='viewport'
+	/>
 
-		%sveltekit.head%
+	%sveltekit.head%
 
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="%sveltekit.assets%/favicon.svg"
-		/>
+	<link
+		href='%sveltekit.assets%/favicon.svg'
+		rel='icon'
+		type='image/svg+xml'
+	/>
 
-		<!-- OpenGraph -->
+	<!-- OpenGraph -->
 
-		<meta
-			name="twitter:card"
-			content="summary_large_image"
-		/>
+	<meta
+		content='summary_large_image'
+		name='twitter:card'
+	/>
 
-		<meta
-			name="twitter:creator"
-			content="@AlejandroAkbal"
-		/>
+	<meta
+		content='@AlejandroAkbal'
+		name='twitter:creator'
+	/>
 
-		<meta
-			name="theme-color"
-			content="#1f2937"
-		/>
+	<meta
+		content='#1f2937'
+		name='theme-color'
+	/>
 
-		<link
-			href="https://rsms.me/inter/inter.css"
-			rel="preload"
-			as="style"
-			onload="this.onload=null; this.rel='stylesheet'"
-		/>
-	</head>
+	<link
+		as='style'
+		href='https://rsms.me/inter/inter.css'
+		onload="this.onload=null; this.rel='stylesheet'"
+		rel='preload'
+	/>
+</head>
 
-	<body
-		class="bg-base-100 font-sans antialiased"
-		data-sveltekit-preload-data="hover"
-	>
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<body
+	class='bg-base-100 font-sans antialiased'
+	data-sveltekit-preload-data='hover'
+>
+<div style='display: contents'>%sveltekit.body%</div>
+</body>
 </html>

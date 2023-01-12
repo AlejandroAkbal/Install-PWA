@@ -16,52 +16,50 @@ module.exports = {
 	plugins: [require('daisyui')],
 
 	daisyui: {
-		themes: [
-			{
-				custom: {
-					'color-scheme': 'light',
+		themes: [{
+			custom: {
+				'color-scheme': 'light',
 
-					primary: defaultColors.sky[300],
-					'primary-focus': defaultColors.sky[400],
-					'primary-content': 'black',
+				primary: defaultColors.sky[300],
+				'primary-focus': defaultColors.sky[400],
+				'primary-content': 'black',
 
-					secondary: defaultColors.lime[300],
-					'secondary-content': 'black',
+				secondary: defaultColors.lime[300],
+				'secondary-content': 'black',
 
-					// accent: '#ebdc99',
-					// 'accent-content': '#282425',
+				// accent: '#ebdc99',
+				// 'accent-content': '#282425',
 
-					// neutral: '#7d7259',
-					// 'neutral-content': '#e4d8b4',
+				// neutral: '#7d7259',
+				// 'neutral-content': '#e4d8b4',
 
-					'base-100': defaultColors.gray[50],
-					'base-200': defaultColors.gray[200],
-					'base-300': defaultColors.gray[300],
-					'base-content': defaultColors.gray[700],
+				'base-100': defaultColors.gray[50],
+				'base-200': defaultColors.gray[200],
+				'base-300': defaultColors.gray[300],
+				'base-content': defaultColors.gray[700],
 
-					info: defaultColors.sky[900],
-					'info-content': '#ffffff',
+				info: defaultColors.sky[900],
+				'info-content': '#ffffff',
 
-					// success: '#21CC51',
-					// 'success-content': '#ffffff',
+				// success: '#21CC51',
+				// 'success-content': '#ffffff',
 
-					// warning: '#FF6154',
-					// 'warning-content': '#ffffff',
+				// warning: '#FF6154',
+				// 'warning-content': '#ffffff',
 
-					// error: '#DE1C8D',
-					// 'error-content': '#ffffff',
+				// error: '#DE1C8D',
+				// 'error-content': '#ffffff',
 
-					'--rounded-box': '1rem',
-					'--rounded-btn': '99rem',
-					'--rounded-badge': '1rem',
+				'--rounded-box': '1rem',
+				'--rounded-btn': '99rem',
+				'--rounded-badge': '1rem',
 
-					// '--animation-btn': '0',
-					// '--animation-input': '0',
-					// '--btn-focus-scale': '1',
+				// '--animation-btn': '0',
+				// '--animation-input': '0',
+				// '--btn-focus-scale': '1',
 
-					'--tab-radius': '99rem'
-				}
+				'--tab-radius': '99rem'
 			}
-		]
+		}]
 	}
 }
