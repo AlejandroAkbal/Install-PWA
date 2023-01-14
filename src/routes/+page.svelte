@@ -34,7 +34,9 @@
 
 						<!-- Body -->
 						<p class='text-base text-base-content sm:text-xl lg:text-lg xl:text-xl'>
-							Installing a PWA on all platforms is not as easy as it should. We teach your users how to do it. For free.
+							Installing a PWA is not straightforward on all platforms. We help your users install your PWA regardless
+							of their device.
+							For free.
 						</p>
 
 						<!-- Action -->
@@ -63,7 +65,7 @@
 											class='block w-full rounded-md bg-gradient-to-r from-primary to-secondary py-3 px-4 font-medium text-primary-content shadow hover:brightness-75 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2 focus:ring-offset-primary-content'
 											type='submit'
 										>
-											Create page
+											Create install page
 										</button>
 									</div>
 								</div>
