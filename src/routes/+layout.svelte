@@ -81,7 +81,7 @@
 				<div class='hidden space-x-8 md:ml-10 md:flex'>
 					<a
 						class='text-base font-medium link link-hover'
-						href='/from/www.akbal.dev'>Example</a
+						href='/from/image-to-text-ocr.netlify.app'>Example</a
 					>
 				</div>
 			</div>
@@ -138,7 +138,7 @@
 					<!-- Links -->
 					<div class='space-y-1 px-2'>
 						<a
-							href='/from/www.akbal.dev'
+							href='/from/image-to-text-ocr.netlify.app'
 							class='block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50'
 						>
 							Example
