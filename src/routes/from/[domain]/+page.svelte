@@ -16,7 +16,7 @@
 			return 0
 		}
 
-		if (/iPad|iPhone|iPod/.test(userAgent)) {
+		if (/iPad|iPhone|iPod|Safari/.test(userAgent)) {
 			return 1
 		}
 
