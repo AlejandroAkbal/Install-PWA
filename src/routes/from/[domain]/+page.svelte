@@ -61,15 +61,20 @@
 
 	let canvas
 
-	async function preloadImages(imageUrls) {
+	/**
+	 * @param {string[]} urls - Array of Image URLs
+	 * @returns {Promise<HTMLImageElement[]>} - Promise that resolves when all images are loaded, or rejects if any image fails to load
+	 */
+	function preloadImages(urls) {
+		const promises = urls.map((url) => {
+			return new Promise((resolve, reject) => {
+				const image = new Image()
 
-		const promises = imageUrls.map(async (url) => {
-			const img = new Image()
-			img.src = url
+				image.src = url
 
-			await img.decode()
-
-			return img
+				image.onload = () => resolve(image)
+				image.onerror = () => reject(`Image failed to load: ${url}`)
+			})
 		})
 
 		return Promise.all(promises)
@@ -87,9 +92,6 @@
 			selectedDevice.capture,
 			selectedDevice.cutout
 		])
-
-		image.src = selectedDevice.capture
-		imageOnTop.src = selectedDevice.cutout
 
 		canvasContext.drawImage(image, 0, selectedDevice.cutoutMarginTop)
 
