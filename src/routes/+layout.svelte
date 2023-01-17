@@ -52,37 +52,37 @@
 						/>
 					</a>
 					<div class='-mr-2 flex items-center md:hidden'>
-						<button
-							aria-expanded='false'
-							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-200 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary-focus'
-							on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
-							type='button'
-						>
-							<span class='sr-only'>Open main menu</span>
-							<!-- Heroicon name: outline/bars-3 -->
-							<svg
-								aria-hidden='true'
-								class='h-6 w-6'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='1.5'
-								viewBox='0 0 24 24'
-								xmlns='http://www.w3.org/2000/svg'
-							>
-								<path
-									d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-								/>
-							</svg>
-						</button>
+						<!--						<button-->
+						<!--							aria-expanded='false'-->
+						<!--							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-200 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary-focus'-->
+						<!--							on:click={() => (mobileMenuOpen = !mobileMenuOpen)}-->
+						<!--							type='button'-->
+						<!--						>-->
+						<!--							<span class='sr-only'>Open main menu</span>-->
+						<!--							&lt;!&ndash; Heroicon name: outline/bars-3 &ndash;&gt;-->
+						<!--							<svg-->
+						<!--								aria-hidden='true'-->
+						<!--								class='h-6 w-6'-->
+						<!--								fill='none'-->
+						<!--								stroke='currentColor'-->
+						<!--								stroke-width='1.5'-->
+						<!--								viewBox='0 0 24 24'-->
+						<!--								xmlns='http://www.w3.org/2000/svg'-->
+						<!--							>-->
+						<!--								<path-->
+						<!--									d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'-->
+						<!--									stroke-linecap='round'-->
+						<!--									stroke-linejoin='round'-->
+						<!--								/>-->
+						<!--							</svg>-->
+						<!--						</button>-->
 					</div>
 				</div>
 				<div class='hidden space-x-8 md:ml-10 md:flex'>
-					<a
-						class='link-hover link text-base font-medium'
-						href='/from/image-to-text-ocr.netlify.app'>Example</a
-					>
+					<!--					<a-->
+					<!--						class='link-hover link text-base font-medium'-->
+					<!--						href='/from/image-to-text-ocr.netlify.app'>Example</a-->
+					<!--					>-->
 				</div>
 			</div>
 		</nav>
