@@ -35,8 +35,7 @@
 						<!-- Body -->
 						<p class='text-base text-base-content sm:text-xl lg:text-lg xl:text-xl'>
 							Installing a PWA is not straightforward on all platforms. We help your users install your PWA regardless
-							of their device.
-							For free.
+							of their device. For free.
 						</p>
 
 						<!-- Action -->
@@ -69,6 +68,17 @@
 										</button>
 									</div>
 								</div>
+
+								<div class='mt-8 space-y-8 text-center sm:text-left'>
+									<span class='text-sm'> Or </span>
+
+									<a
+										class='link link-neutral block text-sm sm:inline'
+										href='/from/image-to-text-ocr.netlify.app'
+									>
+										View example
+									</a>
+								</div>
 							</form>
 						</div>
 					</div>
@@ -86,4 +96,6 @@
 			</div>
 		</div>
 	</div>
+
+	<!--	TODO: Steps -->
 </main>
