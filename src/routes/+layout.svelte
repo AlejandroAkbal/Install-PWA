@@ -153,11 +153,11 @@
 <slot />
 
 <footer class='bg-base-200'>
-	<div class='mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8'>
+	<div class='mx-auto max-w-7xl overflow-hidden py-14 px-6 lg:px-8'>
 		<!-- TODO: Links -->
-		<div class='mt-10 flex justify-center space-x-10'>
+		<div class='flex justify-center space-x-10'>
 			<a
-				class='text-gray-400 hover:text-gray-500'
+				class='link link-neutral'
 				href='https://redirect.akbal.dev/twitter'
 				rel='noopener'
 				target='_blank'
@@ -176,7 +176,7 @@
 			</a>
 
 			<a
-				class='text-gray-400 hover:text-gray-500'
+				class='link link-neutral'
 				href='https://github.com/AlejandroAkbal/Install-PWA'
 				rel='noopener'
 				target='_blank'
@@ -196,8 +196,9 @@
 				</svg>
 			</a>
 		</div>
-		<p class='mt-10 text-center text-xs leading-5 text-gray-500'>
-			Made with <span class='text-red-500'>&#9829;</span> by
+
+		<p class='mt-8 text-center text-xs leading-5 text-base-content'>
+			Made with <span class='text-accent'>&#9829;</span> by
 			<a
 				class='link'
 				href='https://akbal.dev'
