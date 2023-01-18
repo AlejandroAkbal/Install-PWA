@@ -107,9 +107,8 @@
 	}
 </script>
 
-<div class='container mx-auto px-4 sm:px-6 lg:px-8'>
-	<!-- TODO: Gradient from bg-base-200 to bg-base-100 -->
-	<main class='py-6'>
+<div class='bg-gradient-to-b from-base-200 via-white'>
+	<main class='container mx-auto px-4 py-6 sm:px-6 lg:px-8'>
 		<!-- Head -->
 		<section>
 			<div class='grid place-items-center gap-3'>
@@ -240,16 +239,16 @@
 			<h2 class='text-lg font-semibold'>Found this useful?</h2>
 
 			<div class='flex gap-3'>
-
 				<!-- Copy button -->
 				<button
 					class='btn-outline btn-ghost btn-sm btn gap-2'
 					on:click={() => {
-				navigator.clipboard.writeText(window.location.href)
-			}}
+						navigator.clipboard.writeText(window.location.href)
+					}}
 				>
 					<!-- Heroicon name: outline/clipboard-copy -->
 					<svg
+						aria-hidden='true'
 						class='h-5 w-5'
 						fill='none'
 						stroke='currentColor'
@@ -271,11 +270,12 @@
 				<button
 					class='btn-outline btn-ghost btn-sm btn gap-2'
 					on:click={() => {
-				navigator.share({ title: `Install the ${domain} web app!`, url: window.location.href })
-			}}
+						navigator.share({ title: `Install the ${domain} web app!`, url: window.location.href })
+					}}
 				>
 					<!-- Heroicon name: outline/share -->
 					<svg
+						aria-hidden='true'
 						class='h-5 w-5'
 						fill='none'
 						stroke='currentColor'
@@ -295,4 +295,17 @@
 			</div>
 		</section>
 	</main>
+
+	<svg
+		aria-hidden='true'
+		class='text-base-200  sm:-mt-12 lg:-mt-24'
+		viewBox='0 0 1440 320'
+		xmlns='http://www.w3.org/2000/svg'
+	>
+		<path
+			d='M0,32L48,37.3C96,43,192,53,288,85.3C384,117,480,171,576,192C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
+			fill='currentColor'
+			fill-opacity='1'
+		/>
+	</svg>
 </div>
