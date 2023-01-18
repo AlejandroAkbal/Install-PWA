@@ -178,7 +178,7 @@
 						Open the website
 					</a>
 
-					{#if selectedTab === 0}
+					{#if selectedTab in [0, 2] }
 						in Google Chrome
 					{/if}
 				</li>
