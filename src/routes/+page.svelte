@@ -83,13 +83,12 @@
 						</div>
 					</div>
 				</div>
-				<div class='mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0'>
+				<div class='mt-12 lg:relative lg:m-0'>
 					<div class='mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0'>
-						<!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
 						<img
-							alt=''
+							alt='App installation illustration'
 							class='w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
-							src='https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg'
+							src='/media/img/undraw_app_installation.svg'
 						/>
 					</div>
 				</div>
