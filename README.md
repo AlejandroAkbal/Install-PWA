@@ -1,38 +1,46 @@
-# create-svelte
+<p align='center'>
+  <img
+  src='./static/favicon.svg'
+  alt='Install PWA' height='100'/>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<h1 align='center'>
+Install PWA
+</h1>
 
-## Creating a project
+[Install PWA](https://www.installpwa.com/) is a utility website made by [Alejandro Akbal](https://akbal.dev)
+for teaching end users how to install a Progressive Web App.
 
-If you're seeing this, you've probably already done this step. Congrats!
+![Preview](https://screenshot.akbal.dev/v1/capture?width=1200&height=630&mime_type=jpeg&url=https%3A%2F%2Fwww.installpwa.com)
+
+## Social
+
+<a href="https://www.producthunt.com/posts/install-pwa?utm_source=badge-featured&utm_medium=badge" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=375558&theme=dark" alt="Install&#0032;PWA - Teach&#0032;users&#0032;how&#0032;to&#0032;install&#0032;your&#0032;web&#0032;app&#0032;in&#0032;3&#0032;steps&#0044;&#0032;for&#0032;free | Product Hunt"
+    >
+</a>
+
+## Usage
+
+### Developing
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+pnpm install
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
+pnpm dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `pnpm preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
