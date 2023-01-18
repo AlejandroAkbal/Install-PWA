@@ -11,8 +11,8 @@ export function load({ params }) {
 	const currentUrl = encodeURIComponent(PUBLIC_APP_URL + '/from/' + params.domain)
 
 	return {
-		title: params.domain,
-		description: `Learn how to install the ${params.domain} app!`,
+		title: `Install the ${params.domain} web app`,
+		description: `Learn how to install the ${params.domain} web app in your device! It does not require any permissions and does not take up any space on your device.`,
 
 		imageUrl: `https://screenshot.akbal.dev/v1/capture?width=1200&height=630&delay=2&mime_type=jpeg&url=${currentUrl}`,
 
