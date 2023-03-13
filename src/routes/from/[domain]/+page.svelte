@@ -83,8 +83,6 @@
 	async function drawTwoImageUrlsAsOne() {
 		const canvasContext = canvas.getContext('2d')
 
-		console.debug('Got canvas')
-
 		// Clear canvas
 		canvasContext.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -98,8 +96,6 @@
 
 		// Draw image on top
 		canvasContext.drawImage(imageOnTop, 0, 0)
-
-		console.debug('Images drawn')
 	}
 
 	if (browser) {
