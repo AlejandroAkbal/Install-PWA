@@ -92,6 +92,10 @@
 
 		canvasContext.drawImage(image, 0, selectedDevice.cutoutMarginTop)
 
+		// Darken image
+		canvasContext.fillStyle = 'rgba(0, 0, 0, 0.45)'
+		canvasContext.fillRect(0, 0, canvas.width, canvas.height)
+
 		// Draw image on top
 		canvasContext.drawImage(imageOnTop, 0, 0)
 
