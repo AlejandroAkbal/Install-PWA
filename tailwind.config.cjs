@@ -33,7 +33,8 @@ module.exports = {
 				// neutral: '#7d7259',
 				// 'neutral-content': '#e4d8b4',
 
-				'base-100': defaultColors.gray[50],
+				'base-0': defaultColors.white,
+				'base-100': defaultColors.gray[100],
 				'base-200': defaultColors.gray[200],
 				'base-300': defaultColors.gray[300],
 				'base-content': defaultColors.gray[700],

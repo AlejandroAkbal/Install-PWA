@@ -2,7 +2,6 @@
 	import '../app.css'
 
 	import { navigating, page } from '$app/stores'
-	import { slide } from 'svelte/transition'
 
 	let mobileMenuOpen = false
 
@@ -14,10 +13,10 @@
 <svelte:head>
 	<title>
 		{$page.data.title
-		? //
-		`${$page.data.title} – Install PWA`
-		: //
-		'Install PWA – Easy App installation instructions'}
+			? //
+			`${$page.data.title} – Install PWA`
+			: //
+			'Install PWA – Easy App installation instructions'}
 	</title>
 
 	<meta
@@ -36,7 +35,7 @@
 
 <header class='relative'>
 	<!-- Desktop menu -->
-	<div class='bg-base-200 py-6'>
+	<div class='bg-base-100 py-6'>
 		<nav
 			aria-label='Global'
 			class='relative mx-auto flex max-w-7xl items-center justify-between px-6'
@@ -54,7 +53,7 @@
 					<div class='-mr-2 flex items-center md:hidden'>
 						<!--						<button-->
 						<!--							aria-expanded='false'-->
-						<!--							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-200 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary-focus'-->
+						<!--							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary-focus'-->
 						<!--							on:click={() => (mobileMenuOpen = !mobileMenuOpen)}-->
 						<!--							type='button'-->
 						<!--						>-->
@@ -98,59 +97,72 @@
             From: "opacity-100 scale-100"
             To: "opacity-0 scale-95"
         -->
-	{#if mobileMenuOpen}
-		<div
-			transition:slide={{ duration: 200 }}
-			class='absolute inset-x-0 top-0 origin-top transform p-2 transition md:hidden'
-		>
-			<div class='overflow-hidden rounded-lg bg-base-100 shadow-md ring-1 ring-base-content ring-opacity-5'>
-				<div class='flex items-center justify-between px-5 pt-4'>
-					<p>👋</p>
+	<!--{#if mobileMenuOpen}-->
+	<!--	<div-->
+	<!--		transition:slide={{ duration: 200 }}-->
+	<!--		class='absolute inset-x-0 top-0 origin-top transform p-2 transition md:hidden'-->
+	<!--	>-->
+	<!--		<div class='overflow-hidden rounded-lg bg-base-100 shadow-md ring-1 ring-base-content ring-opacity-5'>-->
+	<!--			<div class='flex items-center justify-between px-5 pt-4'>-->
+	<!--				<p>👋</p>-->
 
-					<div class='-mr-2'>
-						<button
-							on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
-							type='button'
-							class='inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-focus'
-						>
-							<span class='sr-only'>Close menu</span>
-							<!-- Heroicon name: outline/x-mark -->
-							<svg
-								class='h-6 w-6'
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke-width='1.5'
-								stroke='currentColor'
-								aria-hidden='true'
-							>
-								<path
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									d='M6 18L18 6M6 6l12 12'
-								/>
-							</svg>
-						</button>
-					</div>
-				</div>
+	<!--				<div class='-mr-2'>-->
+	<!--					<button-->
+	<!--						on:click={() => (mobileMenuOpen = !mobileMenuOpen)}-->
+	<!--						type='button'-->
+	<!--						class='inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-focus'-->
+	<!--					>-->
+	<!--						<span class='sr-only'>Close menu</span>-->
+	<!--						&lt;!&ndash; Heroicon name: outline/x-mark &ndash;&gt;-->
+	<!--						<svg-->
+	<!--							class='h-6 w-6'-->
+	<!--							xmlns='http://www.w3.org/2000/svg'-->
+	<!--							fill='none'-->
+	<!--							viewBox='0 0 24 24'-->
+	<!--							stroke-width='1.5'-->
+	<!--							stroke='currentColor'-->
+	<!--							aria-hidden='true'-->
+	<!--						>-->
+	<!--							<path-->
+	<!--								stroke-linecap='round'-->
+	<!--								stroke-linejoin='round'-->
+	<!--								d='M6 18L18 6M6 6l12 12'-->
+	<!--							/>-->
+	<!--						</svg>-->
+	<!--					</button>-->
+	<!--				</div>-->
+	<!--			</div>-->
 
-				<div class='pt-5 pb-6'>
-					<!-- Links -->
-					<div class='space-y-1 px-2'>
-						<a
-							href='/from/image-to-text-ocr.netlify.app'
-							class='block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50'
-						>
-							Example
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	{/if}
+	<!--			<div class='pt-5 pb-6'>-->
+	<!--				&lt;!&ndash; Links &ndash;&gt;-->
+	<!--				<div class='space-y-1 px-2'>-->
+	<!--					<a-->
+	<!--						href='/from/image-to-text-ocr.netlify.app'-->
+	<!--						class='block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50'-->
+	<!--					>-->
+	<!--						Example-->
+	<!--					</a>-->
+	<!--				</div>-->
+	<!--			</div>-->
+	<!--		</div>-->
+	<!--	</div>-->
+	<!--{/if}-->
 </header>
 
 <slot />
+
+<!-- Footer separator -->
+<svg
+	aria-hidden='true'
+	class='text-base-200 sm:-mt-12 lg:-mt-24'
+	viewBox='0 0 1440 320'
+	xmlns='http://www.w3.org/2000/svg'
+>
+	<path
+		d='M0,32L48,37.3C96,43,192,53,288,85.3C384,117,480,171,576,192C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
+		fill='currentColor'
+	/>
+</svg>
 
 <footer class='bg-base-200'>
 	<div class='mx-auto max-w-7xl overflow-hidden py-14 px-6 lg:px-8'>

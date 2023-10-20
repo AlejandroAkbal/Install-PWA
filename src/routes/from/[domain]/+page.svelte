@@ -107,7 +107,7 @@
 	}
 </script>
 
-<div class='bg-gradient-to-b from-base-200 via-white'>
+<div class='bg-gradient-to-b from-base-100 via-base-0'>
 	<main class='container mx-auto px-4 py-6 sm:px-6 lg:px-8'>
 		<!-- Head -->
 		<section>
@@ -221,15 +221,15 @@
 					<h3 class='text-lg font-semibold'>Done! ✨</h3>
 
 					{#if selectedTab === 0}
-						You can open the <code>{data.domain}</code> app from your Home Screen
+						Open the <code>{data.domain}</code> app from your Home Screen
 
 						<!--  -->
 					{:else if selectedTab === 1}
-						You can open the <code>{data.domain}</code> app from your Home Screen
+						Open the <code>{data.domain}</code> app from your Home Screen
 
 						<!--  -->
 					{:else}
-						You can open the <code>{data.domain}</code> app from your Desktop
+						Open the <code>{data.domain}</code> app from your Desktop
 					{/if}
 				</li>
 			</ol>
@@ -295,17 +295,4 @@
 			</div>
 		</section>
 	</main>
-
-	<svg
-		aria-hidden='true'
-		class='text-base-200  sm:-mt-12 lg:-mt-24'
-		viewBox='0 0 1440 320'
-		xmlns='http://www.w3.org/2000/svg'
-	>
-		<path
-			d='M0,32L48,37.3C96,43,192,53,288,85.3C384,117,480,171,576,192C672,213,768,203,864,192C960,181,1056,171,1152,181.3C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
-			fill='currentColor'
-			fill-opacity='1'
-		/>
-	</svg>
 </div>

@@ -16,8 +16,8 @@
 	}
 </script>
 
-<main>
-	<div class='bg-base-200 pt-2 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14'>
+<main class='bg-gradient-to-b from-base-100 via-base-0'>
+	<div class='pt-2 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14'>
 		<div class='mx-auto max-w-7xl lg:px-8'>
 			<div class='lg:grid lg:grid-cols-2 lg:gap-8'>
 				<div class='mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left'>
@@ -51,7 +51,7 @@
 											for='website-url'>Website URL</label
 										>
 										<input
-											class='block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900'
+											class='block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2 focus:ring-offset-primary-content'
 											id='website-url'
 											name='website-url'
 											placeholder='Enter your website URL'
