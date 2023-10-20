@@ -74,7 +74,7 @@
 
 									<a
 										class='link link-neutral block text-sm sm:inline'
-										href='/from/image-to-text-ocr.netlify.app'
+										href='/from/paste.photos'
 									>
 										View example
 									</a>
