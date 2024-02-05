@@ -4,7 +4,7 @@ import { PUBLIC_APP_URL } from '$env/static/public'
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	if (!params.domain) {
-		throw error(404, 'Not found')
+		error(404, 'Not found');
 	}
 
 	// Poor mans router
