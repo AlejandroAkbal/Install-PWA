@@ -21,7 +21,6 @@ module.exports = {
 				'color-scheme': 'light',
 
 				primary: defaultColors.sky[300],
-				'primary-focus': defaultColors.sky[400],
 				'primary-content': 'black',
 
 				secondary: defaultColors.lime[300],
@@ -57,7 +56,6 @@ module.exports = {
 
 				// '--animation-btn': '0',
 				// '--animation-input': '0',
-				// '--btn-focus-scale': '1',
 
 				'--tab-radius': '99rem'
 			}

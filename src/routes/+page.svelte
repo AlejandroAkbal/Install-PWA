@@ -51,7 +51,7 @@
 											for='website-url'>Website URL</label
 										>
 										<input
-											class='block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2 focus:ring-offset-primary-content'
+											class='block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-content'
 											id='website-url'
 											name='website-url'
 											placeholder='Enter your website URL'
@@ -61,7 +61,7 @@
 									</div>
 									<div class='mt-3 sm:mt-0 sm:ml-3'>
 										<button
-											class='block w-full rounded-md bg-gradient-to-r from-primary to-secondary py-3 px-4 font-medium text-primary-content shadow hover:brightness-75 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2 focus:ring-offset-primary-content'
+											class='block w-full rounded-md bg-gradient-to-r from-primary to-secondary py-3 px-4 font-medium text-primary-content shadow hover:brightness-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-content'
 											type='submit'
 										>
 											Create install page

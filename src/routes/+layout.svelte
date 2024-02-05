@@ -53,7 +53,7 @@
 					<div class='-mr-2 flex items-center md:hidden'>
 						<!--						<button-->
 						<!--							aria-expanded='false'-->
-						<!--							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2 focus:ring-primary-focus'-->
+						<!--							class='focus-ring-inset inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-300 focus:outline-none focus:ring-2'-->
 						<!--							on:click={() => (mobileMenuOpen = !mobileMenuOpen)}-->
 						<!--							type='button'-->
 						<!--						>-->
@@ -110,7 +110,7 @@
 	<!--					<button-->
 	<!--						on:click={() => (mobileMenuOpen = !mobileMenuOpen)}-->
 	<!--						type='button'-->
-	<!--						class='inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-focus'-->
+	<!--						class='inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-base-content hover:bg-base-100 focus:outline-none focus:ring-2 focus:ring-inset'-->
 	<!--					>-->
 	<!--						<span class='sr-only'>Close menu</span>-->
 	<!--						&lt;!&ndash; Heroicon name: outline/x-mark &ndash;&gt;-->
