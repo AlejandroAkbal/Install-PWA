@@ -29,6 +29,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          PUBLIC_APP_URL: 'https://www2.installpwa.com'
         run: |
           pnpm run build
 
