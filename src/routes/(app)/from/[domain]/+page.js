@@ -1,14 +1,14 @@
 import { error } from '@sveltejs/kit'
-import { PUBLIC_APP_URL } from '$env/static/public'
+import { ORIGIN } from '$env/static/public'
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	if (!params.domain) {
-		error(404, 'Not found');
+		error(404, 'Not found')
 	}
 
 	// Poor mans router
-	const currentUrl = encodeURIComponent(PUBLIC_APP_URL + '/from/' + params.domain)
+	const currentUrl = encodeURIComponent(ORIGIN + '/from/' + params.domain)
 
 	return {
 		title: `Install the ${params.domain} web app`,
