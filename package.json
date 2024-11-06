@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.48.2",
 		"@rgossiaux/svelte-headlessui": "^2.0.0",
-		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/adapter-node": "^5.2.9",
 		"@sveltejs/kit": "^2.7.3",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"autoprefixer": "^10.4.20",

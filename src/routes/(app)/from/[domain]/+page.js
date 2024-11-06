@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit'
-import { ORIGIN } from '$env/static/public'
+import { ORIGIN } from '$env/dynamic/private'
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
