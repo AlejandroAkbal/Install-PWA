@@ -45,6 +45,8 @@
 					<a href='/'>
 						<span class='sr-only'>Install PWA</span>
 						<img
+							height='193'
+							width='512'
 							alt='Logo'
 							class='h-8 w-auto sm:h-10'
 							src='/favicon.svg'

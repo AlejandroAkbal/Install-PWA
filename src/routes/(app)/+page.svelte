@@ -86,6 +86,8 @@
 				<div class='mt-12 lg:relative lg:m-0'>
 					<div class='mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0'>
 						<img
+							width='738'
+							height='729'
 							alt='App installation illustration'
 							class='w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
 							src='/media/img/undraw_app_installation.svg'
