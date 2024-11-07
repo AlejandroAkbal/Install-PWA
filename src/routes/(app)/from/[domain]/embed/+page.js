@@ -1,10 +1,15 @@
 import { error } from '@sveltejs/kit'
 
 /** @type {import('./$types').PageLoad} */
-export function load({ url, params }) {
+export function load({ url, params, setHeaders }) {
 	if (!params.domain) {
 		error(404, 'Not found')
 	}
+
+	// Cache for 1 hour, revalidate every 24 hours
+	setHeaders({
+		'cache-control': 'public, max-age=3600, stale-while-revalidate=86400'
+	})
 
 	return {
 		title: `Install the ${params.domain} web app`,
