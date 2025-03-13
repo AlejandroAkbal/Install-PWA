@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+    <!-- Main page -->
+    <url>
+        <loc>https://www.installpwa.com/</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Popular services -->
+    <url>
+        <loc>https://www.installpwa.com/from/youtube.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/twitter.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/instagram.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/open.spotify.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/music.youtube.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Communication -->
+    <url>
+        <loc>https://www.installpwa.com/from/web.telegram.org</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/whatsapp.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Shopping -->
+    <url>
+        <loc>https://www.installpwa.com/from/alibaba.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/flipkart.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/target.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/lowes.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/olx.in</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Travel -->
+    <url>
+        <loc>https://www.installpwa.com/from/uber.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/makemytrip.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/wego.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Entertainment -->
+    <url>
+        <loc>https://www.installpwa.com/from/pinterest.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/hulu.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/soundslice.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Business -->
+    <url>
+        <loc>https://www.installpwa.com/from/forbes.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/bmw.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/starbucks.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Regional -->
+    <url>
+        <loc>https://www.installpwa.com/from/jumia.com.ng</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/debenhams.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/bingoemcasa.com.br</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/foudelabouffe.ca</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/shine.in</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/rentio.jp</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/carigami.fr</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Other -->
+    <url>
+        <loc>https://www.installpwa.com/from/tinder.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/run247.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/nekodex.io</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/kopa.co</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <!-- Adult content -->
+    <url>
+        <loc>https://www.installpwa.com/from/pornhub.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/sankaku.app</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/xvideos.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/xnxx.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/xhamster.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/r34.app</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/kurosearch.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/r-34.xyz</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.installpwa.com/from/rule34video.com</loc>
+        <lastmod>2024-03-13</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+</urlset>
