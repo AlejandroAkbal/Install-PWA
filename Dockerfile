@@ -18,6 +18,8 @@ RUN pnpm build
 # Stage 2: Production
 FROM node:${NODE_VERSION}-alpine AS production
 
+RUN apk add --no-cache tini
+
 ENV NODE_ENV=production
 
 WORKDIR /app
@@ -30,5 +32,5 @@ EXPOSE 3000
 
 HEALTHCHECK CMD wget --no-verbose --spider http://127.0.0.1:3000/ || exit 1
 
-# Use `docker run --init` or `init: true` in compose for proper signal handling
+ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["node", "build"]
