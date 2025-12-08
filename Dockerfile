@@ -24,6 +24,8 @@ WORKDIR /app
 
 RUN apk add --no-cache tini
 
+# SvelteKit adapter-node bundles devDependencies via Rollup
+# If you add packages to "dependencies", you must also copy node_modules
 COPY --from=builder --chown=node:node /app/build ./build
 
 USER node
