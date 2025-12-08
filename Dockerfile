@@ -18,11 +18,11 @@ RUN pnpm build
 # Stage 2: Production
 FROM node:${NODE_VERSION}-alpine AS production
 
-RUN apk add --no-cache tini
-
 ENV NODE_ENV=production
 
 WORKDIR /app
+
+RUN apk add --no-cache tini
 
 COPY --from=builder --chown=node:node /app/build ./build
 
