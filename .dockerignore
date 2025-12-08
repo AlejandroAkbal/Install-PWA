@@ -1,0 +1,13 @@
+node_modules
+build
+.svelte-kit
+.git
+.gitignore
+tests
+*.md
+.env*
+.npmrc
+.prettierrc
+.prettierignore
+.eslintrc.cjs
+playwright.config.js
