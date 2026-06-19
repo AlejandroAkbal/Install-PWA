@@ -1,0 +1,3 @@
+## 2025-02-15 - Improve Canvas Accessibility and Non-Submit Button Behavior
+**Learning:** `alt` attributes are not valid on `<canvas>` elements and cause `svelte-check` accessibility warnings. Furthermore, buttons without explicit `type` attributes in `svelte-headlessui` or custom layouts can trigger unintended behaviors, especially when nested near forms or when click events bubble.
+**Action:** Replace `alt` attributes on `<canvas>` elements with proper `aria-label` tags and inner fallback text nodes. Always add `type="button"` to buttons that are not intended to submit forms, especially icon buttons or secondary action buttons. Avoid running global `pnpm format` to prevent polluting targeted UX pull requests with noisy formatting diffs across unrelated files.
