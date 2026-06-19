@@ -136,12 +136,14 @@
 				</TabList>
 
 				<canvas
-					alt="Capture of '{data.domain}' domain"
+					aria-label="Capture of '{data.domain}' domain"
 					bind:this={canvas}
 					class='max-h-[60vh] w-auto max-w-full rounded-md border-0 shadow-xl md:max-h-[55vh]'
 					height={selectedDevice.height}
 					width={selectedDevice.width}
-				/>
+				>
+					Capture of '{data.domain}' domain
+				</canvas>
 			</TabGroup>
 		</div>
 
@@ -174,7 +176,7 @@
 							class='tooltip tooltip-bottom tooltip-primary mt-2 block text-left'
 							data-tip='Try again later! Or just continue, it will still work'
 						>
-							<button class='btn-ghost no-animation btn-xs btn pl-0'>Only see "Add to Home Screen"?</button>
+							<button type='button' class='btn-ghost no-animation btn-xs btn pl-0'>Only see "Add to Home Screen"?</button>
 						</div>
 
 						<!--  -->
