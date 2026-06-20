@@ -99,6 +99,9 @@
 		canvasContext.drawImage(imageOnTop, 0, 0)
 	}
 
+	let copied = false
+	let copyTimeout = null
+
 	if (browser) {
 		selectedTab = detectTypeOfDevice()
 	}
@@ -243,29 +246,54 @@
 			<div class='flex gap-3'>
 				<!-- Copy button -->
 				<button
-					class='btn-outline btn-ghost btn-sm btn gap-2'
+					class='btn-outline btn-ghost btn-sm btn gap-2 w-32'
 					on:click={() => {
 						navigator.clipboard.writeText(window.location.href)
+						copied = true
+						if (copyTimeout) clearTimeout(copyTimeout)
+						copyTimeout = setTimeout(() => {
+							copied = false
+							copyTimeout = null
+						}, 2000)
 					}}
 				>
-					<!-- Heroicon name: outline/clipboard-copy -->
-					<svg
-						aria-hidden='true'
-						class='h-5 w-5'
-						fill='none'
-						stroke='currentColor'
-						stroke-width='2'
-						viewBox='0 0 24 24'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<path
-							d='M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3'
-							stroke-linecap='round'
-							stroke-linejoin='round'
-						/>
-					</svg>
-
-					Copy URL
+					{#if copied}
+						<!-- Heroicon name: outline/check -->
+						<svg
+							aria-hidden='true'
+							class='h-5 w-5 text-success'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path
+								d='M5 13l4 4L19 7'
+								stroke-linecap='round'
+								stroke-linejoin='round'
+							/>
+						</svg>
+						Copied!
+					{:else}
+						<!-- Heroicon name: outline/clipboard-copy -->
+						<svg
+							aria-hidden='true'
+							class='h-5 w-5'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='2'
+							viewBox='0 0 24 24'
+							xmlns='http://www.w3.org/2000/svg'
+						>
+							<path
+								d='M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3'
+								stroke-linecap='round'
+								stroke-linejoin='round'
+							/>
+						</svg>
+						Copy URL
+					{/if}
 				</button>
 
 				<!-- Share button -->
