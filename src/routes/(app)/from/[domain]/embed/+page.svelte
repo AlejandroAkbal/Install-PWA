@@ -108,13 +108,12 @@
 	}
 </script>
 
-<div class='bg-gradient-to-b from-base-100 via-base-0'>
-	<main class='container mx-auto px-4 py-6 sm:px-6 lg:px-8'>
+<div class="via-base-0 bg-gradient-to-b from-base-100">
+	<main class="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
 		<!-- Head -->
 		<section>
-			<div class='grid place-items-center gap-3'>
-
-				<h1 class='text-lg'>
+			<div class="grid place-items-center gap-3">
+				<h1 class="text-lg">
 					Install the
 					<output>{data.domain}</output>
 					app in 2 simple steps
@@ -123,13 +122,13 @@
 		</section>
 
 		<!-- Device selector & Preview -->
-		<div class='mt-6'>
+		<div class="mt-6">
 			<TabGroup
-				class='grid place-items-center gap-6'
+				class="grid place-items-center gap-6"
 				defaultIndex={selectedTab}
 				on:change={(e) => (selectedTab = e.detail)}
 			>
-				<TabList class='tabs tabs-boxed max-w-fit'>
+				<TabList class="tabs-boxed tabs max-w-fit">
 					<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Android</Tab>
 					<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>iOS / iPadOS</Tab>
 					<Tab class={({ selected }) => (selected ? 'tab tab-active' : 'tab')}>Desktop</Tab>
@@ -138,7 +137,7 @@
 				<canvas
 					alt="Capture of '{data.domain}' domain"
 					bind:this={canvas}
-					class='max-h-[60vh] w-auto max-w-full rounded-md border-0 shadow-xl md:max-h-[55vh]'
+					class="max-h-[60vh] w-auto max-w-full rounded-md border-0 shadow-xl md:max-h-[55vh]"
 					height={selectedDevice.height}
 					width={selectedDevice.width}
 				/>
@@ -146,49 +145,49 @@
 		</div>
 
 		<!-- Instructions -->
-		<section class='mt-6'>
-			<ol class='space-y-4'>
+		<section class="mt-6">
+			<ol class="space-y-4">
 				<li>
-					<h3 class='text-lg font-semibold'>Step 1</h3>
+					<h3 class="text-lg font-semibold">Step 1</h3>
 
 					{#if selectedTab === 0}
-						Click the <kbd class='kbd kbd-sm'>More</kbd> button
+						Click the <kbd class="kbd kbd-sm">More</kbd> button
 
 						<!--  -->
 					{:else if selectedTab === 1}
-						Click the <kbd class='kbd kbd-sm'>Share</kbd> button
+						Click the <kbd class="kbd kbd-sm">Share</kbd> button
 
 						<!--  -->
 					{:else}
-						Find the <kbd class='kbd kbd-sm'>Install</kbd> button
+						Find the <kbd class="kbd kbd-sm">Install</kbd> button
 					{/if}
 				</li>
 
 				<li>
-					<h3 class='text-lg font-semibold'>Step 2</h3>
+					<h3 class="text-lg font-semibold">Step 2</h3>
 
 					{#if selectedTab === 0}
-						Click <kbd class='kbd kbd-sm'>Install App</kbd>
+						Click <kbd class="kbd kbd-sm">Install App</kbd>
 
 						<div
-							class='tooltip tooltip-bottom tooltip-primary mt-2 block text-left'
-							data-tip='Try again later! Or just continue, it will still work'
+							class="tooltip tooltip-bottom tooltip-primary mt-2 block text-left"
+							data-tip="Try again later! Or just continue, it will still work"
 						>
-							<button class='btn-ghost no-animation btn-xs btn pl-0'>Only see "Add to Home Screen"?</button>
+							<button class="btn btn-ghost no-animation btn-xs pl-0">Only see "Add to Home Screen"?</button>
 						</div>
 
 						<!--  -->
 					{:else if selectedTab === 1}
-						Click <kbd class='kbd kbd-sm'>Add to Home Screen</kbd>
+						Click <kbd class="kbd kbd-sm">Add to Home Screen</kbd>
 
 						<!--  -->
 					{:else}
-						Click <kbd class='kbd kbd-sm'>Install</kbd>
+						Click <kbd class="kbd kbd-sm">Install</kbd>
 					{/if}
 				</li>
 
 				<li>
-					<h3 class='text-lg font-semibold'>Done! ✨</h3>
+					<h3 class="text-lg font-semibold">Done! ✨</h3>
 
 					{#if selectedTab === 0}
 						Open the <code>{data.domain}</code> app from your Home Screen

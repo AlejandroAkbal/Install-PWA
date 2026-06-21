@@ -3,7 +3,10 @@
 </script>
 
 <svelte:head>
-	<meta content='noindex' name='robots'>
+	<meta
+		content="noindex"
+		name="robots"
+	/>
 </svelte:head>
 
 <slot></slot>
