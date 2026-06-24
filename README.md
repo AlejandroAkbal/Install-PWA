@@ -24,7 +24,7 @@ for teaching end users how to install a Progressive Web App.
 
 <a href="https://uptimerobot.com/sponsorship/" target="_blank">
     <img src="./.github/uptimerobot-logo-dark.svg" alt="UptimeRobot sponsorship" height="32">
-</a> 
+</a>
 
 Powered by [UptimeRobot](https://uptimerobot.com/) via their sponsorship program.
 
