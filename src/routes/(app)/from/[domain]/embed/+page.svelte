@@ -136,12 +136,14 @@
 				</TabList>
 
 				<canvas
-					alt="Capture of '{data.domain}' domain"
+					aria-label="Capture of '{data.domain}' domain"
 					bind:this={canvas}
 					class='max-h-[60vh] w-auto max-w-full rounded-md border-0 shadow-xl md:max-h-[55vh]'
 					height={selectedDevice.height}
 					width={selectedDevice.width}
-				/>
+				>
+					Capture of '{data.domain}' domain
+				</canvas>
 			</TabGroup>
 		</div>
 
