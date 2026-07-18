@@ -1,0 +1,3 @@
+## 2025-02-13 - Canvas Accessibility in Svelte
+**Learning:** `<canvas>` elements do not support the `alt` attribute and will cause type errors in Svelte. They also should not use `role="img"` as it causes a11y warnings.
+**Action:** Always use `aria-label` directly on the `<canvas>` tag and provide inner fallback text inside the `<canvas>...</canvas>` block to ensure screen readers and non-supporting browsers can parse the intent, which also resolves Svelte type errors.
